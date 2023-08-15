@@ -152,10 +152,10 @@ export default {
       bus.$emit('newToastMessage', this.loginApi.message);
     },
     showSignupLink() {
-      return parseBoolean(window.chatwootConfig.signupEnabled);
+      return parseBoolean(window.mondaychatConfig.signupEnabled);
     },
     showGoogleOAuth() {
-      return Boolean(window.chatwootConfig.googleOAuthClientId);
+      return Boolean(window.mondaychatConfig.googleOAuthClientId);
     },
     login() {
       this.loginApi.showLoading = true;

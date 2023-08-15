@@ -57,7 +57,7 @@ export default {
       type: String,
       default: '',
     },
-    isOnChatwootCloud: {
+    isOnMondaychatCloud: {
       type: Boolean,
       default: false,
     },
@@ -84,7 +84,7 @@ export default {
       );
       return menuItemsFilteredByRole.filter(item => {
         if (item.showOnlyOnCloud) {
-          return this.isOnChatwootCloud;
+          return this.isOnMondaychatCloud;
         }
         return true;
       });

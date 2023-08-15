@@ -3,27 +3,27 @@ import { buildPortalArticleURL, buildPortalURL } from '../portalHelper';
 describe('PortalHelper', () => {
   describe('buildPortalURL', () => {
     it('returns the correct url', () => {
-      window.chatwootConfig = {
-        hostURL: 'https://app.chatwoot.com',
-        helpCenterURL: 'https://help.chatwoot.com',
+      window.mondaychatConfig = {
+        hostURL: 'https://app.monday.com.vn',
+        helpCenterURL: 'https://help.monday.com.vn',
       };
       expect(buildPortalURL('handbook')).toEqual(
-        'https://help.chatwoot.com/hc/handbook'
+        'https://help.monday.com.vn/hc/handbook'
       );
-      window.chatwootConfig = {};
+      window.mondaychatConfig = {};
     });
   });
 
   describe('buildPortalArticleURL', () => {
     it('returns the correct url', () => {
-      window.chatwootConfig = {
-        hostURL: 'https://app.chatwoot.com',
-        helpCenterURL: 'https://help.chatwoot.com',
+      window.mondaychatConfig = {
+        hostURL: 'https://app.monday.com.vn',
+        helpCenterURL: 'https://help.monday.com.vn',
       };
       expect(
         buildPortalArticleURL('handbook', 'culture', 'fr', 'article-slug')
-      ).toEqual('https://help.chatwoot.com/hc/handbook/articles/article-slug');
-      window.chatwootConfig = {};
+      ).toEqual('https://help.monday.com.vn/hc/handbook/articles/article-slug');
+      window.mondaychatConfig = {};
     });
   });
 });

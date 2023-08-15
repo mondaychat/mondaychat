@@ -38,7 +38,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
   let!(:conversation) { create(:conversation, identifier: message_params[:event][:thread_ts]) }
 
   before do
-    stub_request(:get, 'https://chatwoot-assets.local/sample.png').to_return(
+    stub_request(:get, 'https://mondaychat-assets.local/sample.png').to_return(
       status: 200,
       body: File.read('spec/assets/sample.png'),
       headers: {}
@@ -69,7 +69,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         allow(builder).to receive(:sender).and_return(nil)
         builder.perform
         expect(conversation.messages.count).to eql(messages_count + 1)
-        expect(conversation.messages.last.content).to eql('this is test https://chatwoot.com Hey @Sojan Test again')
+        expect(conversation.messages.last.content).to eql('this is test https://monday.com.vn Hey @Sojan Test again')
       end
 
       it 'creates a private note' do
@@ -129,7 +129,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         allow(builder).to receive(:sender).and_return(nil)
         builder.perform
         expect(conversation.messages.count).to eql(messages_count + 1)
-        expect(conversation.messages.last.content).to eql('this is test https://chatwoot.com Hey @Sojan Test again')
+        expect(conversation.messages.last.content).to eql('this is test https://monday.com.vn Hey @Sojan Test again')
         expect(conversation.messages.last.attachments).to be_any
       end
 

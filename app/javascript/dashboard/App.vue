@@ -5,7 +5,7 @@
     class="app-wrapper app-root"
     :class="{ 'app-rtl--wrapper': isRTLView }"
   >
-    <update-banner :latest-chatwoot-version="latestChatwootVersion" />
+    <update-banner :latest-mondaychat-version="latestMondaychatVersion" />
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
@@ -49,7 +49,7 @@ export default {
   data() {
     return {
       showAddAccountModal: false,
-      latestChatwootVersion: null,
+      latestMondaychatVersion: null,
     };
   },
 
@@ -80,7 +80,7 @@ export default {
     },
   },
   mounted() {
-    this.setLocale(window.chatwootConfig.selectedLocale);
+    this.setLocale(window.mondaychatConfig.selectedLocale);
   },
   methods: {
     setLocale(locale) {
@@ -93,12 +93,12 @@ export default {
       });
       const {
         locale,
-        latest_chatwoot_version: latestChatwootVersion,
+        latest_mondaychat_version: latestMondaychatVersion,
       } = this.getAccount(this.currentAccountId);
       const { pubsub_token: pubsubToken } = this.currentUser || {};
       this.setLocale(locale);
       this.updateRTLDirectionView(locale);
-      this.latestChatwootVersion = latestChatwootVersion;
+      this.latestMondaychatVersion = latestMondaychatVersion;
       vueActionCable.init(pubsubToken);
 
       verifyServiceWorkerExistence(registration =>

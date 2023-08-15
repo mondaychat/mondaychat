@@ -32,7 +32,7 @@
         </div>
       </div>
       <testimonials
-        v-if="isAChatwootInstance"
+        v-if="isAMondaychatInstance"
         class="medium-6 testimonial--container"
         @resize-containers="resizeContainers"
       />
@@ -62,12 +62,12 @@ export default {
   },
   computed: {
     ...mapGetters({ globalConfig: 'globalConfig/get' }),
-    isAChatwootInstance() {
-      return this.globalConfig.installationName === 'Chatwoot';
+    isAMondaychatInstance() {
+      return this.globalConfig.installationName === 'Mondaychat';
     },
   },
   beforeMount() {
-    this.isLoading = this.isAChatwootInstance;
+    this.isLoading = this.isAMondaychatInstance;
   },
   methods: {
     resizeContainers(hasTestimonials) {

@@ -26,8 +26,8 @@ export default {
     CONDENSED: 'condensed',
     EXPANDED: 'expanded',
   },
-  DOCS_URL: '//www.chatwoot.com/docs/product/',
-  TESTIMONIAL_URL: 'https://testimonials.cdn.chatwoot.com/content.json',
+  DOCS_URL: '//www.monday.com.vn/docs/product/',
+  TESTIMONIAL_URL: 'https://testimonials.cdn.monday.com.vn/content.json',
   SMALL_SCREEN_BREAKPOINT: 1024,
   AVAILABILITY_STATUS_KEYS: ['online', 'busy', 'offline'],
 };

@@ -140,9 +140,9 @@ export default {
     ...mapGetters({ globalConfig: 'globalConfig/get' }),
     termsLink() {
       return this.$t('REGISTER.TERMS_ACCEPT')
-        .replace('https://www.chatwoot.com/terms', this.globalConfig.termsURL)
+        .replace('https://www.monday.com.vn/terms', this.globalConfig.termsURL)
         .replace(
-          'https://www.chatwoot.com/privacy-policy',
+          'https://www.monday.com.vn/privacy-policy',
           this.globalConfig.privacyURL
         );
     },
@@ -195,7 +195,7 @@ export default {
       this.didCaptchaReset = false;
     },
     showGoogleOAuth() {
-      return Boolean(window.chatwootConfig.googleOAuthClientId);
+      return Boolean(window.mondaychatConfig.googleOAuthClientId);
     },
     resetCaptcha() {
       if (!this.globalConfig.hCaptchaSiteKey) {

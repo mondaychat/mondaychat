@@ -17,9 +17,9 @@
               })
             }}
           </p>
-          <p v-if="globalConfig.installationName === 'Chatwoot'">
+          <p v-if="globalConfig.installationName === 'Mondaychat'">
             <a
-              href="https://www.chatwoot.com/changelog"
+              href="https://www.monday.com.vn/changelog"
               target="_blank"
               rel="noopener nofollow noreferrer"
               class="onboarding--link"
