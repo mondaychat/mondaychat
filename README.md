@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://s3.us-west-2.amazonaws.com/gh-assets.monday.com.vn/brand.svg" alt="Woot-logo" width="240" />
+  <img src="https://raw.githubusercontent.com/mondayvn/mondaychat/8d72b90f72f7164c2bf3a61e90062affea5779c5/public/brand-assets/logo.svg" alt="Woot-logo" width="240" />
 
   <p align="center">Customer engagement suite, an open-source alternative to Intercom, Zendesk, Salesforce Service Cloud etc.</p>
 </p>
