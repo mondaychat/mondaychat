@@ -334,7 +334,7 @@ function setup_mondaychat() {
   rvm install "ruby-3.2.2"
   rvm use 3.2.2 --default
 
-  git clone https://github.com/mondaychat/mondaychat.git
+  git clone https://github.com/mondayvn/mondaychat.git
   cd mondaychat
   git checkout "$BRANCH"
   bundle
@@ -642,7 +642,7 @@ Miscellaneous:
 Exit status:
 Returns 0 if successful; non-zero otherwise.
 
-Report bugs at https://github.com/mondaychat/mondaychat/issues
+Report bugs at https://github.com/mondayvn/mondaychat/issues
 Get help, https://monday.com.vn/community?utm_source=cwctl
 
 EOF
